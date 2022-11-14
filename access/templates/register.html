@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Registration Page
+{% endblock %}
+
+{% block content %}
+
+<body class="text-center">
+    <div class="container">
+        <form method="POST" class="form-register" style="color:white">
+            {{ form.hidden_tag()}}
+            <!--This stop attacks by generating a token to stop cross site attacks-->
+            <img src="{{url_for('static', filename='AILogo.png')}}" align="middle" />
+            <h1 class="h3 mb-3 font-weight-bold">
+                To Create your Account please fill out the Form below
+            </h1>
+            {{ form.username.label() }}
+            {{ form.username(class="form-control", placeholder="User Name") }}
+
+            {{ form.email_address.label() }}
+            {{ form.email_address(class="form-control", placeholder="Email Address") }}
+
+            {{ form.password1.label() }}
+            {{ form.password1(class="form-control", placeholder="Enter Password ") }}
+
+            {{ form.password2.label() }}
+            {{ form.password2(class="form-control", placeholder="Password Confirmation") }}
+            <br>
+            {{ form.submit(class="btn btn-lg btn-block btn-primary")}}
+        </form>
+    </div>
+</body>
+{% endblock %}

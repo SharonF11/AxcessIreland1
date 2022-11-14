@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block title %}
+Subscriptions Page
+{% endblock %}
+
+{% block content %}
+<br>
+<section class="block block--dark block--skewed-left hero">
+    <div class="container grid">
+        <header class="block__header hero__content">
+            <!--(SF) The below is a link to AOS css which can give different effects on the web page when scrolling, I have used this tool in the past from viewing "CodewithMosh", The H1 header gives a larger font on the main header-->
+            <h1 data-aos="zoom-in" data-aos-duration="3000" class="block-heading">
+                Fitness Equipment for those serious about getting FIT</h1>
+            <h2 data-aos="zoom-in" data-aos-duration="3000">Tailored made fitness from the experts</h2>
+        </header>
+    </div>
+</section>
+
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css')}}">
+<table class="table table-hover ">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Details</th>
+            <th scope="col">Price</th>
+            <th scope="col">Options</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in items %}
+        <tr>
+            <td>{{ item_id }}</td>
+            <td>{{ item_name }}</td>
+            <td>{{ item_Details }}</td>
+            <td>€{{ item_Price }}</td>
+            <td>
+                <button class="btn btn-outline btn-info"> More Info </button>
+                <button class="btn btn-outline btn-success"> Purchase Now </button>
+            </td>
+        </tr>
+        {% endfor %}
+
+    </tbody>
+</table>
+{% endblock%}

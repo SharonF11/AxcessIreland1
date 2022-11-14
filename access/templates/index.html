@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+{% block title %}
+Home Page
+{% endblock %}
+
+{% block content %}
+<br>
+<br>
+WELCOME TO AXCESS IRELAND
+<br>
+<br>
+
+<section class="block block--dark block--skewed-left hero">
+    <div class="container grid">
+        <header class="block__header hero__content">
+            <!--(SF) The below is a link to AOS css which can give different effects on the web page when scrolling, I have used this tool in the past from viewing "CodewithMosh", The H1 header gives a larger font on the main header-->
+            <h1 data-aos="zoom-in" data-aos-duration="3000" class="block-heading">
+                AXCESS IRELAND - The one stop for information on living and working in the republic of Ireland </h1>
+            <h2 data-aos="zoom-in" data-aos-duration="3000">AXCESS IRELAND IS HERE TO HELP YOU ENTER IRELAND </h2>
+        </header>
+    </div>
+</section>
+
+{% endblock %}
