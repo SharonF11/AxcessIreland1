@@ -1,6 +1,7 @@
 from access import app
 from flask import render_template, redirect, url_for, flash
 from access.forms import RegisterForm
+from flask_sqlalchemy import SQLAlchemy
 from access.models import Item, User
 from access import db
 
